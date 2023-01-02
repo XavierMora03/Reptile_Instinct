@@ -36,5 +36,24 @@ body{
 	font-weight: normal;
 }
 
+.icon:hover{
+	transition: transform 1s ease;
+	transform: scale(1.07);
+}
+
+#reseñas{
+	background-color: #bc4749;
+	text-align: center;
+	padding: 7% 15%;
+}
+
+#reseñas img{
+	width: 60%;
+}
+#reseñas h2{
+	font-weight: bolder;
+	color: #ffff;
+}
+
 
 
