@@ -12,9 +12,18 @@ body{
 
 .texto-logo{
 	font-family: "Righteous";
-	size: 3rem;
-	font-size: x-large;
+	font-size: 200%;
 
 }
 
+#diferenciadores .img-fluid{
+	width: 70%;
+}
 
+#diferenciadores h3{
+	font-size: 230%;
+	font-weight: bolder;
+}
+#diferenciadores h5{
+	font-weight: normal;
+}
