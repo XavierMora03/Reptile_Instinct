@@ -1,20 +1,20 @@
-#title{
-	background-color: #519259;
-}
 
 h1{
-	font-family: "Righteous";
-	size: 3rem;
+	font-family: "Righteous",serif;
+	size: 5rem;
 	line-height: 1.5;
 }
 
 body{
 	font-family: "Andika",serif;
+	background-color: #519259;
 }
 
 .texto-logo{
 	font-family: "Righteous";
 	size: 3rem;
 	font-size: x-large;
+
 }
+
 
