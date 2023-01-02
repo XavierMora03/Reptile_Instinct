@@ -5,9 +5,13 @@ h1{
 	line-height: 1.5;
 }
 
+.navbar{
+	background-color: #386641;
+
+}
 body{
 	font-family: "Andika",serif;
-	background-color: #519259;
+	background-color: #a7c957;
 }
 
 .texto-logo{
@@ -16,6 +20,13 @@ body{
 
 }
 
+	#
+
+#diferenciadores{
+
+	background-color: #f2e8cf;
+
+}
 #diferenciadores .img-fluid{
 	width: 70%;
 }
@@ -27,4 +38,8 @@ body{
 }
 #diferenciadores h5{
 	font-weight: normal;
+}
+
+.icon{
+	margin-bottom: 2rem;
 }
