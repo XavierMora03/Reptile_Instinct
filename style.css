@@ -42,18 +42,28 @@ body{
 }
 
 #reseñas{
-	background-color: #bc4749;
+	background-color: #386641;
 	text-align: center;
 	padding: 7% 15%;
+	color: #ffff;
 }
 
-#reseñas img{
-	width: 60%;
+
+#reseñas em{
+	font-size: x-large;
+	font: Andika,serif;
 }
+
 #reseñas h2{
+	font-size: 200px%;
 	font-weight: bolder;
 	color: #ffff;
 }
 
+.imagen-testimonio{
+	width: 30%;
+	border-radius: 10%;
+
+}
 
 
