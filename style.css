@@ -48,22 +48,27 @@ body{
 	color: #ffff;
 }
 
-
-#reseñas em{
-	font-size: x-large;
+#reseñas p{
+	font-size: larger;
 	font: Andika,serif;
+	font-weight: normal;
+
 }
 
-#reseñas h2{
-	font-size: 200px%;
+#reseñas h4{
 	font-weight: bolder;
 	color: #ffff;
 }
 
 .imagen-testimonio{
-	width: 30%;
 	border-radius: 10%;
-
+	width: 30rem;
 }
 
+#reseñas .sr-only{
+	font-family: "Andika",serif;
+	font-weight: normal;
+
+}
+ 
 
