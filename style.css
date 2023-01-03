@@ -22,6 +22,7 @@ body{
 
 }
 
+
 #diferenciadores{
 	background-color: #f2e8cf;
 }
@@ -46,8 +47,11 @@ body{
 #reseñas{
 	background-color: #386641;
 	text-align: center;
-	padding: 7% 15%;
 	color: #ffff;
+}
+#reseñas h4{
+	padding-top: 2rem;
+	padding-bottom: 1rem;
 }
 
 #reseñas p{
@@ -73,4 +77,5 @@ body{
 
 }
  
+	
 
