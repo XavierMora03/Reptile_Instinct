@@ -62,15 +62,10 @@ body{
 	font-family: "Andika",serif;
 	font-weight: normal;
 }
-
-.cont-testimonio{
-	max-width: 30rem;
-	padding: 0rem 2rem !important;
-}
+/*borre cont testimonio, creo que no servia de nada */
 .imagen-testimonio{
-	border-radius: 10% !important;
-	object-fit: scale-down;
-	will-change: 300px;
+	object-fit: contain;
+	height:  600px !important;
 }
 
 
@@ -80,8 +75,6 @@ body{
 	}
 
 }
- 
-	
 .pie-pagina div{
 	padding: 1% 8%;
 	font-weight: bold;
@@ -99,10 +92,7 @@ body{
 	padding: 10px;
 }
 
-.carousel-container{
-	height: 700px;
-}
 
 .texto-review{
-	height: 8rem ; 
+	height: 9rem ; 
 }
