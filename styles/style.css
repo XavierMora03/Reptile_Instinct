@@ -8,8 +8,11 @@ h1{
 
 body{
 	font-family: "Andika",serif;
+	background-color:  #386641 !important;
+}
 
-	background-color: #386641 !important;
+.border-success {
+	border-color:#81B214!important;
 }
 .texto-logo{
 	font-family: "Righteous";
