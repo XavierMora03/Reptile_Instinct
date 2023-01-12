@@ -89,3 +89,7 @@ body{
 .ico{
 	padding: 10px;
 }
+
+.carousel-container{
+	height: 45rem!important;
+}
