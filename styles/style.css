@@ -55,7 +55,7 @@ body{
 .reseñas p{
 	font-size: larger;
 	font-weight: bold;
-	padding: 2rem 0rem 2rem;
+	padding: 2rem 0rem ;
 }
 
 .reseñas .sr-only{
@@ -69,13 +69,16 @@ body{
 }
 .imagen-testimonio{
 	border-radius: 10% !important;
+	object-fit: scale-down;
+	will-change: 300px;
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
 	.reseñas h4{
 		font-size: 22px ;
 	}
+
 }
  
 	
@@ -86,12 +89,18 @@ body{
 	background-color:#f2e8cf ;
 }
 
+@media(max-width: 400px){
+		.carousel-container{
+			height: 600px !important;
+		}	
+}
+
 .ico{
 	padding: 10px;
 }
 
 .carousel-container{
-	height: 43rem !important;
+	height: 700px;
 }
 
 .texto-review{
