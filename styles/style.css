@@ -72,9 +72,9 @@ body{
 }
 
 
-@media (max-width: 900px) {
-	#reseñas h4{
-		font-size: 23px;
+@media (max-width: 1200px) {
+	.reseñas h4{
+		font-size: 22px ;
 	}
 }
  
