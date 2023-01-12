@@ -69,8 +69,6 @@ body{
 }
 .imagen-testimonio{
 	border-radius: 10% !important;
-	max-height: 30rem;
-	max-width: 30rem;
 }
 
 
@@ -93,9 +91,9 @@ body{
 }
 
 .carousel-container{
-	height: 40rem !important;
+	height: 43rem !important;
 }
 
 .texto-review{
-	height: 10rem ; 
+	height: 8rem ; 
 }
