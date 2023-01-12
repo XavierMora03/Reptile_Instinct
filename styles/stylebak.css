@@ -8,28 +8,28 @@ h1{
 
 body{
 	font-family: "Andika",serif;
-
-	background-color: #386641 !important;
+	background-color: #386641; !important
 }
+
 .texto-logo{
 	font-family: "Righteous";
 	font-size: 200%;
 }
 
 
-.diferenciadores{
+#diferenciadores{
 	background-color: #f2e8cf;
 }
-.diferenciadores .img-fluid{
+#diferenciadores .img-fluid{
 	width: 49%;
 }
 
-.diferenciadores h3{
+#diferenciadores h3{
 	font-family: "Righteous";
 	font-size: xx-large;
 	font-weight: bolder;
 }
-.diferenciadores h5{
+#diferenciadores h5{
 	font-weight: normal;
 }
 .diff-clase{
@@ -42,33 +42,29 @@ body{
 	transform: scale(1.07);
 }
 
-.reseñas{
+#reseñas{
 	text-align: center;
 	color: #ffff;
 }
-.reseñas h4{
+#reseñas h4{
 	padding-top: 2rem;
 	padding-bottom: 1rem;
 	font-size: xx-large;
 	font-weight: bolder;
 }
-.reseñas p{
+#reseñas p{
 	font-size: larger;
 	font-weight: bold;
 	padding: 2rem 0rem 2rem;
 }
 
-.reseñas .sr-only{
+#reseñas .sr-only{
 	font-family: "Andika",serif;
 	font-weight: normal;
 }
-
-.cont-testimonio{
-	max-width: 30rem;
-	padding: 0rem 2rem !important;
-}
 .imagen-testimonio{
-	border-radius: 10% !important;
+	border-radius: 10%;
+	width: 30rem;
 }
 
 
@@ -79,11 +75,11 @@ body{
 }
  
 	
-.pie-pagina div{
+#pie-pagina div{
 	padding: 1% 8%;
 	font-weight: bold;
 	text-align: center;
-	background-color:#f2e8cf ;
+	background-color: #fff;
 }
 
 .ico{
