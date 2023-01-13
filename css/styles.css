@@ -8,7 +8,7 @@ h1{
 
 body{
 	font-family: "Andika",serif;
-	background-color:  #386641 !important;
+	background-color:  #386641;
 }
 
 .border-success {
@@ -19,7 +19,9 @@ body{
 	font-size: 200%;
 }
 
-
+.title .text-center{
+	color: #dde5b6;
+}
 .diferenciadores{
 	background-color: #f2e8cf;
 }
@@ -41,7 +43,8 @@ body{
 
 }
 .icon:hover{
-	transition: transform 1s ease;
+	color: initial;
+	/* transition: transform 1s ease; */
 	transform: scale(1.07);
 }
 
@@ -61,10 +64,6 @@ body{
 	padding: 2rem 0rem ;
 }
 
-.reseñas .sr-only{
-	font-family: "Andika",serif;
-	font-weight: normal;
-}
 /*borre cont testimonio, creo que no servia de nada */
 .imagen-testimonio{
 	border-radius: 10%!important;
@@ -102,8 +101,23 @@ body{
 .ico{
 	padding: 10px;
 }
-
-
 .texto-review{
 	height: 9rem ; 
+}
+
+
+.center-my-navbar{
+	margin-left: 46% !important;
+	margin-right:auto !important;
+}
+
+/* ITEM */
+.producto{
+	background-color: #fefae0;
+}
+.related{
+	background-color: #adc178 !important;
+}
+.card-body, .card-footer{
+	background-color: #fefae0 !important;
 }

@@ -85,3 +85,8 @@ body{
 .ico{
 	padding: 10px;
 }
+
+.pie-icono{
+	text-decoration: none!important; /* remove underline */
+	color: inherit!important; /* remove blue */
+}
