@@ -67,9 +67,9 @@ body{
 }
 /*borre cont testimonio, creo que no servia de nada */
 .imagen-testimonio{
-	border-radius: 23px!important;
+	border-radius: 10%!important;
 	object-fit: contain;
-	height:  600px !important;
+	max-height:  400px !important;
 }
 
 
@@ -91,7 +91,14 @@ body{
 			height: 500px !important;
 		}	
 }
-
+@media(max-width: 510px){
+		.texto-review{
+			height: 12rem!important;
+		}
+		.imagen-testimonio{
+			max-height: 280px !important;
+		}	
+}
 .ico{
 	padding: 10px;
 }
