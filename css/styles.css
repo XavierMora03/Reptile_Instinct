@@ -105,19 +105,29 @@ body{
 	height: 9rem ; 
 }
 
+.center-searchbar{
+	margin-left: 40%;
 
-.center-my-navbar{
-	margin-left: 46% !important;
-	margin-right:auto !important;
 }
-
+/* breakpoint at large */
+@media(max-width:992px){
+	.center-searchbar{
+		margin-left: auto!important;
+	}
+}
+.carrito{
+}
 /* ITEM */
 .producto{
 	background-color: #fefae0;
 }
-.related{
-	background-color: #adc178 !important;
+.related, .verde{
+	background-color: #e9e8d1 !important;
 }
 .card-body, .card-footer{
 	background-color: #fefae0 !important;
+}
+
+.gris{
+	background-color: #583101 !important;
 }
