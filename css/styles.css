@@ -71,7 +71,7 @@ body {
 .imagen-admin {
   object-fit: contain;
   max-height: 100px !important;
-  max-width: 150px !important;
+  width: 170px !important;
   /* max width deberia se 180 pero, lo subo a 250 para que no se amontone si hay mas de 3   */
 }
 
