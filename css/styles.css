@@ -1,6 +1,6 @@
 h1 {
   font-family: "Righteous", serif;
-  font-size: 5rem;
+  font-size: 60px;
   line-height: 1.5;
 }
 
@@ -12,6 +12,7 @@ body {
 .border-success {
   border-color: #81b214 !important;
 }
+
 .texto-logo {
   font-family: "Righteous";
   font-size: 200%;
@@ -20,9 +21,11 @@ body {
 .title .text-center {
   color: #dde5b6;
 }
+
 .diferenciadores {
   background-color: #f2e8cf;
 }
+
 .diferenciadores .img-fluid {
   width: 49%;
 }
@@ -32,13 +35,16 @@ body {
   font-size: xx-large;
   font-weight: bolder;
 }
+
 .diferenciadores h5 {
   font-weight: normal;
 }
+
 .diff-clase {
   padding-top: 80px;
   padding-bottom: 70px;
 }
+
 .icon:hover {
   color: initial;
   /* transition: transform 1s ease; */
@@ -49,12 +55,14 @@ body {
   text-align: center;
   color: #ffff;
 }
+
 .reseñas h4 {
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: xx-large;
   font-weight: bolder;
 }
+
 .reseñas p {
   font-size: larger;
   font-weight: bold;
@@ -71,7 +79,7 @@ body {
 .imagen-admin {
   object-fit: contain;
   max-height: 100px !important;
-  width: 170px !important;
+  width: 160px !important;
   /* max width deberia se 180 pero, lo subo a 250 para que no se amontone si hay mas de 3   */
 }
 
@@ -80,6 +88,7 @@ body {
     font-size: 22px;
   }
 }
+
 .pie-pagina div {
   padding: 1% 8%;
   font-weight: bold;
@@ -92,17 +101,21 @@ body {
     height: 500px !important;
   }
 }
+
 @media (max-width: 510px) {
   .texto-review {
     height: 12rem !important;
   }
+
   .imagen-testimonio {
     max-height: 280px !important;
   }
 }
+
 .ico {
   padding: 10px;
 }
+
 .texto-review {
   height: 9rem;
 }
@@ -110,22 +123,26 @@ body {
 .center-searchbar {
   margin-left: 40%;
 }
+
 /* breakpoint at large */
 @media (max-width: 992px) {
   .center-searchbar {
     margin-left: auto !important;
   }
 }
-.carrito {
-}
+
+.carrito {}
+
 /* ITEM */
 .producto {
   background-color: #fefae0;
 }
+
 .related,
 .verde {
   background-color: #e9e8d1 !important;
 }
+
 .card-body,
 .card-footer {
   background-color: #fefae0 !important;
@@ -133,4 +150,9 @@ body {
 
 .gris {
   background-color: #583101 !important;
+}
+
+
+.navbar-admin {
+  width: 50%;
 }
