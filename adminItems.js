@@ -1,9 +1,11 @@
 // por si el navegador guarda coockies
 //
 var selecciones =
-  " td > div.input-group > input.form-control,  td > select.form-select, td > div.px-3 >button";
+  " td > div.input-group > input.form-control,  td > select.form-select, td > div.px-3 >button , td > div.px-2 > input";
 
-$("tr.nuevoItem >  td > div.input-group > input.form-control").val("");
+$(
+  "tr >  td > div.input-group > input.form-control , td > div.px-2 > input"
+).val("");
 if ($(":checked")) {
   $(":checked").prop("checked", false);
   $(selecciones).prop("disabled", "disabled");
