@@ -1,133 +1,136 @@
-
-h1{
-	font-family: "Righteous",serif;
-	size: 5rem;
-	line-height: 1.5;
+h1 {
+  font-family: "Righteous", serif;
+  font-size: 5rem;
+  line-height: 1.5;
 }
 
-
-body{
-	font-family: "Andika",serif;
-	background-color:  #386641;
+body {
+  font-family: "Andika", serif;
+  background-color: #386641;
 }
 
 .border-success {
-	border-color:#81B214!important;
+  border-color: #81b214 !important;
 }
-.texto-logo{
-	font-family: "Righteous";
-	font-size: 200%;
-}
-
-.title .text-center{
-	color: #dde5b6;
-}
-.diferenciadores{
-	background-color: #f2e8cf;
-}
-.diferenciadores .img-fluid{
-	width: 49%;
+.texto-logo {
+  font-family: "Righteous";
+  font-size: 200%;
 }
 
-.diferenciadores h3{
-	font-family: "Righteous";
-	font-size: xx-large;
-	font-weight: bolder;
+.title .text-center {
+  color: #dde5b6;
 }
-.diferenciadores h5{
-	font-weight: normal;
+.diferenciadores {
+  background-color: #f2e8cf;
 }
-.diff-clase{
-	padding-top: 80px;
-	padding-bottom: 70px;
-
-}
-.icon:hover{
-	color: initial;
-	/* transition: transform 1s ease; */
-	transform: scale(1.07);
+.diferenciadores .img-fluid {
+  width: 49%;
 }
 
-.reseñas{
-	text-align: center;
-	color: #ffff;
+.diferenciadores h3 {
+  font-family: "Righteous";
+  font-size: xx-large;
+  font-weight: bolder;
 }
-.reseñas h4{
-	padding-top: 2rem;
-	padding-bottom: 1rem;
-	font-size: xx-large;
-	font-weight: bolder;
+.diferenciadores h5 {
+  font-weight: normal;
 }
-.reseñas p{
-	font-size: larger;
-	font-weight: bold;
-	padding: 2rem 0rem ;
+.diff-clase {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+.icon:hover {
+  color: initial;
+  /* transition: transform 1s ease; */
+  transform: scale(1.07);
+}
+
+.reseñas {
+  text-align: center;
+  color: #ffff;
+}
+.reseñas h4 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.reseñas p {
+  font-size: larger;
+  font-weight: bold;
+  padding: 2rem 0rem;
 }
 
 /*borre cont testimonio, creo que no servia de nada */
-.imagen-testimonio{
-	border-radius: 10%!important;
-	object-fit: contain;
-	max-height:  400px !important;
+.imagen-testimonio {
+  border-radius: 10% !important;
+  object-fit: contain;
+  max-height: 400px !important;
 }
 
+.imagen-admin {
+  object-fit: contain;
+  max-height: 100px !important;
+  max-width: 150px !important;
+  /* max width deberia se 180 pero, lo subo a 250 para que no se amontone si hay mas de 3   */
+}
 
 @media (max-width: 1100px) {
-	.reseñas h4{
-		font-size: 22px ;
-	}
-
+  .reseñas h4 {
+    font-size: 22px;
+  }
 }
-.pie-pagina div{
-	padding: 1% 8%;
-	font-weight: bold;
-	text-align: center;
-	background-color:#f2e8cf ;
-}
-
-@media(max-width: 400px){
-		.carousel-container{
-			height: 500px !important;
-		}	
-}
-@media(max-width: 510px){
-		.texto-review{
-			height: 12rem!important;
-		}
-		.imagen-testimonio{
-			max-height: 280px !important;
-		}	
-}
-.ico{
-	padding: 10px;
-}
-.texto-review{
-	height: 9rem ; 
+.pie-pagina div {
+  padding: 1% 8%;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f2e8cf;
 }
 
-.center-searchbar{
-	margin-left: 40%;
+@media (max-width: 400px) {
+  .carousel-container {
+    height: 500px !important;
+  }
+}
+@media (max-width: 510px) {
+  .texto-review {
+    height: 12rem !important;
+  }
+  .imagen-testimonio {
+    max-height: 280px !important;
+  }
+}
+.ico {
+  padding: 10px;
+}
+.texto-review {
+  height: 9rem;
+}
 
+.center-searchbar {
+  margin-left: 40%;
 }
 /* breakpoint at large */
-@media(max-width:992px){
-	.center-searchbar{
-		margin-left: auto!important;
-	}
+@media (max-width: 992px) {
+  .center-searchbar {
+    margin-left: auto !important;
+  }
 }
-.carrito{
+.carrito {
 }
 /* ITEM */
-.producto{
-	background-color: #fefae0;
+.producto {
+  background-color: #fefae0;
 }
-.related, .verde{
-	background-color: #e9e8d1 !important;
+.related,
+.verde {
+  background-color: #e9e8d1 !important;
 }
-.card-body, .card-footer{
-	background-color: #fefae0 !important;
+.card-body,
+.card-footer {
+  background-color: #fefae0 !important;
 }
 
-.gris{
-	background-color: #583101 !important;
+.gris {
+  background-color: #583101 !important;
 }

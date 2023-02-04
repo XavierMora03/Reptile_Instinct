@@ -56,7 +56,7 @@
       </div>
     </nav>
 
-    <table class="table">
+    <table class="table align-middle">
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -71,66 +71,69 @@
         </tr>
       </thead>
       <tbody>
-        <tr disabled>
-          <th scope="row">
+        <tr class="nuevoItem">
+          <th scope="row ">
             1
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" />
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                checked
+              />
             </div>
           </th>
+
           <td>
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="text"
                 class="form-control"
                 placeholder="Piton"
                 aria-label="Python"
                 aria-describedby="basic-addon1"
-                required
+                disabled
               />
             </div>
           </td>
           <td>
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="number"
                 class="form-control"
                 placeholder="$4500"
                 aria-label="Precio"
                 aria-describedby="basic-addon1"
-                required
+                disabled
               />
             </div>
           </td>
           <td>
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="number"
                 class="form-control"
                 placeholder="$6000"
                 aria-label="PrecioR"
                 aria-describedby="basic-addon1"
+                disabled
               />
             </div>
           </td>
           <td>
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="text"
                 class="form-control"
                 placeholder="Yellow Belly, Banana, Cryptic"
                 aria-label="python"
                 aria-describedby="basic-addon1"
-                required
+                disabled
               />
             </div>
           </td>
           <td>
-            <select
-              class="form-select"
-              id="floatingSelectGrid"
-              aria-label="edad"
-            >
+            <select class="form-select" aria-label="edad" disabled>
               <option value="Cria" selected>Cria</option>
               <option value="Juvenil">Juenil</option>
               <option value="Adulta">Adulta</option>
@@ -138,75 +141,57 @@
           </td>
 
           <td>
-            <select
-              class="form-select"
-              id="floatingSelectGrid"
-              aria-label="sexo"
-            >
+            <select class="form-select" aria-label="sexo" disabled>
               <option value="Macho" selected>Macho</option>
               <option value="Hembra">Hembra</option>
             </select>
           </td>
 
           <td>
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="text"
                 class="form-control"
                 placeholder="piton febrero 22 traida bonito patron"
                 aria-label="python"
                 aria-describedby="basic-addon1"
-                required
+                disabled
               />
             </div>
           </td>
           <td>
             <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-bs-ride="true"
+              id="carouselExampleControls"
+              class="carousel slide imagen-admin"
+              data-bs-ride="false"
             >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner" <style>
-              
-              </style>>
-              
-              </style>>
-                <div class="carousel-item active" >
-                  <img src="./images/1.jpg"  class="d-block w-100" alt="..." />
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./images/1.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/2.jpg" class="d-block w-100" alt="..." />
+                  <img
+                    src="./images/2.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/3.jpg" class="d-block w-100" alt="..." />
+                  <img
+                    src="./images/3.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
                 </div>
               </div>
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
+                data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev"
               >
                 <span
@@ -218,7 +203,7 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
+                data-bs-target="#carouselExampleControls"
                 data-bs-slide="next"
               >
                 <span
@@ -269,6 +254,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script src="adminItems.js"></script>
+
     <script
       src="https://kit.fontawesome.com/57964d54f7.js"
       crossorigin="anonymous"
