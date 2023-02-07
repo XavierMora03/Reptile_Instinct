@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="google-site-verification"
+      content="SKbRxk-OLs9v6HLx1JJg7kuF5aRmOniZyvc3C4TwqOc"
+    />
+    <title>Reptihle's Instinct</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!--mis fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Righteous&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- iconos -->
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg d-flex border-bottom rounded border-5 border-success"
+    >
+      <div class="d-flex align-items-center mx-auto">
+        <img
+          src="images/logo.png"
+          class="redirect d-inline-block icon"
+          height="80"
+          width="80"
+          href="./index.html"
+        />
+        <!-- <span class="redirect icon d-none d-md-block d-inline-block align-middle texto-logo" href="./index.html -->
+        <span
+          class="redirect icon d-inline-block texto-logo"
+          href="./index.html
+                    "
+          >Inventario</span
+        >
+      </div>
+      <!-- primera  -->
+      <div class="mx-auto d-flex">
+        <div class="pe-3">
+          <button type="button" class="btn btn-success">Actualizar</button>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-danger">
+            Borrar Seleccionados
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col" class="col-1">Nombre</th>
+          <th scope="col" class="col-1">Precio</th>
+          <th scope="col" class="col-1">Precio regular</th>
+          <th scope="col" class="col-3">Geneticas</th>
+          <th scope="col" class="col-1">Edad</th>
+          <th scope="col" class="col-1">Género</th>
+          <th scope="col" class="col-1">Descripción</th>
+          <th scope="col" class="col-3">Fotos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="nuevoItem">
+          <th scope="row "></th>
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Piton"
+                aria-label="Python"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="$4500"
+                aria-label="Precio"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="$6000"
+                aria-label="PrecioR"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Yellow Belly, Banana, Cryptic"
+                aria-label="python"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+          <td>
+            <select class="form-select" aria-label="edad">
+              <option value="Cria" selected>Cria</option>
+              <option value="Juvenil">Juenil</option>
+              <option value="Adulta">Adulta</option>
+            </select>
+          </td>
+
+          <td>
+            <select class="form-select" aria-label="sexo">
+              <option value="Macho" selected>Macho</option>
+              <option value="Hembra">Hembra</option>
+            </select>
+          </td>
+
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="piton febrero 22 traida bonito patron"
+                aria-label="python"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+          <td class="d-flex align-items-center">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide imagen-admin"
+              data-bs-ride="false"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="px-2 boton-fotos">
+              <input
+                class="form-control"
+                type="file"
+                id="formFileMultiple"
+                multiple
+              />
+            </div>
+          </td>
+        </tr>
+        <tr class="dbItem">
+          <th scope="row ">
+            1
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" />
+            </div>
+          </th>
+
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Piton"
+                aria-label="Python"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="$4500"
+                aria-label="Precio"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="$6000"
+                aria-label="PrecioR"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Yellow Belly, Banana, Cryptic"
+                aria-label="python"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <select class="form-select" aria-label="edad" disabled>
+              <option value="Cria" selected>Cria</option>
+              <option value="Juvenil">Juenil</option>
+              <option value="Adulta">Adulta</option>
+            </select>
+          </td>
+
+          <td>
+            <select class="form-select" aria-label="sexo" disabled>
+              <option value="Macho" selected>Macho</option>
+              <option value="Hembra">Hembra</option>
+            </select>
+          </td>
+
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="piton febrero 22 traida bonito patron"
+                aria-label="python"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+          <td class="d-flex align-items-center">
+            <!-- ojo tienen que ser diferentes todos  -->
+            <div
+              id="carouselExampleControls1"
+              class="carousel slide imagen-admin"
+              data-bs-ride="false"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./images/1.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/2.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/3.jpg"
+                    class="d-block w-100 imagen-admin"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls1"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls1"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="px-1 boton-fotos">
+              <button type="button" class="btn btn-outline-danger" disabled>
+                Eliminar
+              </button>
+            </div>
+
+            <div class="px-1 boton-fotos">
+              <input
+                class="form-control"
+                type="file"
+                id="formFileMultiple"
+                multiple
+                disabled
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- segundo  -->
+    <div class="container aling-text-bottom py-5 my-5"></div>
+
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col" class="col-4">Nombre de génetica</th>
+          <th scope="col" class="col-4">Tipo de gética</th>
+          <th scope="col" class="col-4">Color representativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="nuevoItem">
+          <th scope="row"></th>
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Yellow Belly"
+                aria-label="Python"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </td>
+
+          <td>
+            <select class="form-select" aria-label="edad">
+              <option value="Recesivo">Recesivo</option>
+              <option value="Dominante">Dominante</option>
+              <option value="Codominante" selected>Codominante</option>
+              <option value="Supercodominante">Supercodominante</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="color"
+              class="form-control form-control-color"
+              id="exampleColorInput"
+              value="#563d7c"
+              title="Choose your color"
+            />
+          </td>
+          <td />
+        </tr>
+        <tr class="dbItem">
+          <th scope="row ">
+            1
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" />
+            </div>
+          </th>
+
+          <td>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Yellow Belly"
+                aria-label="Python"
+                aria-describedby="basic-addon1"
+                disabled
+              />
+            </div>
+          </td>
+
+          <td>
+            <select class="form-select" aria-label="edad" disabled>
+              <option value="Recesivo">Recesivo</option>
+              <option value="Dominante">Dominante</option>
+              <option value="Codominante" selected>Codominante</option>
+              <option value="Supercodominante">Supercodominante</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </td>
+
+          <td>
+            <input
+              type="color"
+              class="form-control form-control-color"
+              id="exampleColorInput"
+              value="#563d7c"
+              title="Choose your color"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="container aling-text-bottom py-5 my-5"></div>
+    <section class="pie-pagina">
+      <div class="">
+        <i
+          class="redirect r-out fa fa-brands fa-facebook ico icon fa-2x"
+          href="https://www.facebook.com/profile.php?id=100076822691831"
+        ></i>
+        <i
+          class="redirect r-out fa fa-brands fa-instagram ico icon fa-2x"
+          href="https://instagram.com/reptileinstinct/"
+        ></i>
+        <i
+          class="redirect r-out fa fa-light fa-envelope ico icon fa-2x"
+          href="mail://google.com"
+        ></i>
+        <p>Reptile Instinct</p>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="adminItems.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/57964d54f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

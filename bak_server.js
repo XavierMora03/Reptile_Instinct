@@ -4,31 +4,21 @@ const express = require("express");
 const app = express();
 const ejs = require("ejs");
 app.set("view engine", "ejs");
-app.use(express.static("/home/xavier/reptile/"));
+app.use(express.static("/home/xavier/BOOSTRAP-Reptile_Instinct/templates/"));
+app.use(express.static("/home/xavier/BOOSTRAP-Reptile_Instinct/public"));
 
-app.get("/", (req, res) => {
-	console.log("ahuveo jajajaj");
-	res.sendFile(__dirname + "/index.html");
-	console.log(__dirname);
-});
-
-app.get("/shop", (req, res) => {
-	getProduct(
-		"vivora",
-		"./images/1.jpg",
-		"$60",
-		"$30",
-		"sale",
-		"venggan perrros hoijos de su puta madre"
-	).then((producto) => {
-		ejs
-			.renderFile(__dirname + "/templates/shop_template.ejs", {
-				_products: producto,
-			})
-			.then((finalstr) => {
-				res.send(finalstr);
-			});
-	});
+app.get("/shop.html", (req, res) => {
+	getProduct("vivora", "./images/1.jpg", 69, 43, "sale", 43).then(
+		(producto) => {
+			ejs
+				.renderFile(__dirname + "/templates/shop_template.ejs", {
+					_products: producto,
+				})
+				.then((finalstr) => {
+					res.send(finalstr);
+				});
+		}
+	);
 });
 
 app.listen(3000, (e) => {
