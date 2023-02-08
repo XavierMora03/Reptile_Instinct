@@ -24,9 +24,9 @@ async function asyncFunction() {
     conn = await pool.getConnection();
     const rows = await conn.query("SELECT * FROM reptiles");
     console.log(rows); //[ {val: 1}, meta: ... ]
+    console.log("ESTO FUE TODO DE LOS REPTILES AMIGOS"); //[ {val: 1}, meta: ... ]
     const res = await conn.query(
-      "INSERT INTO store.reptiles(name,regularPrice,price,age,description,genre) VALUES('asdf','asdf,'asdf','adsf',asdf','sdfa')",
-      [1, "mariadb"]
+      "INSERT INTO store.reptiles(name,regularPrice,price,age,description,genre) VALUES('asdf','asdf,'asdf','adsf',asdf','sdfa')"
     );
     console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
   } catch (err) {

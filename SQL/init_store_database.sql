@@ -6,7 +6,7 @@ CREATE TABLE store.reptiles (
   regularPrice DECIMAL(7,2),
   price DECIMAL(7,2) NOT NULL,
   age ENUM("Cria","Juvenil","Adulta") DEFAULT "Cria"  ,
-  descrption varchar(256),
+  description varchar(256),
   genre ENUM("M","H") DEFAULT "M",
 
   PRIMARY KEY(id)
@@ -36,4 +36,4 @@ CREATE TABLE store.fotos_reptiles(
 );
 
 CREATE USER 'storeAdmin'@'localhost' IDENTIFIED BY 'test';
-GRANT ALL PRIVILEGES ON 'store'.* TO 'storeAdmin'@'localhost';
+GRANT ALL PRIVILEGES ON store.* TO 'storeAdmin'@'localhost';
