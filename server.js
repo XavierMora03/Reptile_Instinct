@@ -3,39 +3,38 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const ejs = require("ejs");
-const mariadb = require("mariadb");
 
 app.set("view engine", "ejs");
 app.use(express.static("/home/xavier/reptile/"));
 
-const pool = mariadb.createPool({
+var mysql = require("mysql");
+
+var con = mysql.createConnection({
   host: "localhost",
   user: "storeAdmin",
   password: "test",
-  connectionLimit: 5,
-  database: "store",
-  connectTimeout: 300,
 });
 
-async function asyncFunction() {
-  console.log("iniciando jejej");
-  let conn;
-  try {
-    conn = await pool.getConnection();
-    const rows = await conn.query("SELECT * FROM reptiles");
-    console.log(rows); //[ {val: 1}, meta: ... ]
-    console.log("ESTO FUE TODO DE LOS REPTILES AMIGOS"); //[ {val: 1}, meta: ... ]
-    const res = await conn.query(
-      "INSERT INTO store.reptiles(name,regularPrice,price,age,description,genre) VALUES('asdf','asdf,'asdf','adsf',asdf','sdfa')"
-    );
-    console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
-  } catch (err) {
-    throw err;
-  } finally {
-    if (conn) return conn.end();
-  }
-}
-asyncFunction();
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  let myquery =
+    "INSERT INTO store.reptiles(name,regularPrice,price,age,description,genre) VALUES('piton bobola', '6000', '4500', 'Cria', 'esta bn', 'H')";
+  con.query(myquery, (err, res) => {
+    if (err) throw err;
+    console.log(res);
+  });
+
+  con.query("SELECT * FROM store.reptiles", (err, res) => {
+    if (err) throw err;
+    console.log("este es el resultado epico");
+    console.log(res);
+    console.log(typeof res);
+
+    console.log("este es el numero 3", res[2].id);
+  });
+});
+
 app.get("/", (req, res) => {
   console.log("ahuveo jajajaj");
   res.sendFile(__dirname + "/index.html");

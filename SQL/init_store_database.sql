@@ -35,5 +35,4 @@ CREATE TABLE store.fotos_reptiles(
   FOREIGN KEY(id) REFERENCES store.reptiles(id)
 );
 
-CREATE USER 'storeAdmin'@'localhost' IDENTIFIED BY 'test';
-GRANT ALL PRIVILEGES ON store.* TO 'storeAdmin'@'localhost';
+
