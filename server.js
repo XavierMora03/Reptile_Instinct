@@ -19,7 +19,7 @@ app.get("/shop", (req, res) => {
     "$60",
     "$30",
     "sale",
-    "venggan perrros hoijos de su puta madre"
+    "text-sample"
   ).then((producto) => {
     ejs
       .renderFile(__dirname + "/templates/shop_template.ejs", {
