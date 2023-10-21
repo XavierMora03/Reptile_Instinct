@@ -20,20 +20,19 @@ if ($(":checked")) {
 
 
 
-$('.ReptileList').on('click', (e) => {
+$('.BotonSeleccionReptiles').on('click', (e) => {
   console.log("dioclick")
   var rowParent = $(e.target).parent().parent().parent();
-  console.log(e)
-  rowParent.remove()
-  // if ($(e.target).is(":checked")) {
-  //   rowParent.find(selecciones).prop("disabled", false);
-  // } else {
-  //   rowParent.find(selecciones).prop("disabled", "disabled");
-  // }
+  if ($(e.target).is(":checked")) {
+     rowParent.find(selecciones).prop("disabled", false);
+   } else {
+     rowParent.find(selecciones).prop("disabled", "disabled");
+   }
 });
 
-
-$('.ReptileList').append(`<tr class="dbItem">
+function insertarReptil(objetoReptil){
+  objetoReptil.nombre = "jaja" 
+  var reptileHtml = $.parseHTML( `<tr class="dbItem">
           <th scope="row ">
             1
             <div class="form-check">
@@ -46,7 +45,7 @@ $('.ReptileList').append(`<tr class="dbItem">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Piton 2"
+                placeholder= ${objetoReptil.nombre}
                 aria-label="Python"
                 aria-describedby="basic-addon1"
                 disabled
@@ -189,3 +188,21 @@ $('.ReptileList').append(`<tr class="dbItem">
             </div>
           </td>
         </tr>`)
+
+  $('.ReptileList').append(reptileHtml)
+  
+  $($(reptileHtml).find(".BotonSeleccionReptiles")).on('click', (e) => {
+    var rowParent = $(e.target).parent().parent().parent();
+    console.log(e)
+    //rowParent.remove()
+    if ($(e.target).is(":checked")) {
+    rowParent.find(selecciones).prop("disabled", false);
+    } else {
+      rowParent.find(selecciones).prop("disabled", "disabled");
+    }
+  })
+}
+
+var jajas = { nombre: "jaja"};
+
+insertarReptil(jajas)
