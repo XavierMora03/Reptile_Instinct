@@ -1,38 +1,21 @@
 // por si el navegador guarda coockies
-var selecciones =
-  " td > div.input-group > input.form-control,  td > select.form-select, td > div.boton-fotos  >button , td > div.boton-fotos > input";
+reptileListSize = 1;
+function addInputButtonFunctions(e) {
+	var selecciones =
+		" td > div.input-group > input.form-control,  td > select.form-select, td > div.boton-fotos  >button , td > div.boton-fotos > input";
 
-function disableItems() {
-  var itemsToDisable =
-    " tr.dbItem > td > div.input-group > input.form-control,tr.dbItem >  td > select.form-select,tr.dbItem > td > div.boton-fotos  >button ,tr.dbItem > td > div.boton-fotos > input";
-  $(itemsToDisable).prop("disabled", "disabled");
+	var rowParent = $(e.target).parent().parent().parent();
+	if ($(e.target).is(":checked")) {
+		rowParent.find(selecciones).prop("disabled", false);
+	} else {
+		rowParent.find(selecciones).prop("disabled", "disabled");
+	}
 }
+$(".BotonSeleccionReptiles").on("click", addInputButtonFunctions);
 
-disableItems();
-$(
-  "tr >  td > div.input-group > input.form-control , td > div.px-2 > input"
-).val("");
-
-if ($(":checked")) {
-  $(":checked").prop("checked", false);
-  // console.log($(":checked"));
-}
-
-
-
-$('.BotonSeleccionReptiles').on('click', (e) => {
-  console.log("dioclick")
-  var rowParent = $(e.target).parent().parent().parent();
-  if ($(e.target).is(":checked")) {
-     rowParent.find(selecciones).prop("disabled", false);
-   } else {
-     rowParent.find(selecciones).prop("disabled", "disabled");
-   }
-});
-
-function insertarReptil(objetoReptil){
-  objetoReptil.nombre = "jaja" 
-  var reptileHtml = $.parseHTML( `<tr class="dbItem">
+function getReptileElementListHTML(objetoReptil) {
+	reptileListSize++;
+	return $.parseHTML(`<tr class="dbItem">
           <th scope="row ">
             1
             <div class="form-check">
@@ -118,7 +101,7 @@ function insertarReptil(objetoReptil){
           <td class="d-flex align-items-center">
             <!-- ojo tienen que ser diferentes todos  -->
             <div
-              id="carouselExampleControls1"
+              id="carouselExampleControls${reptileListSize}"
               class="carousel slide imagen-admin"
               data-bs-ride="false"
             >
@@ -148,7 +131,7 @@ function insertarReptil(objetoReptil){
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselExampleControls1"
+                data-bs-target="#carouselExampleControls${reptileListSize}"
                 data-bs-slide="prev"
               >
                 <span
@@ -160,7 +143,7 @@ function insertarReptil(objetoReptil){
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselExampleControls1"
+                data-bs-target="#carouselExampleControls${reptileListSize}"
                 data-bs-slide="next"
               >
                 <span
@@ -187,22 +170,19 @@ function insertarReptil(objetoReptil){
               />
             </div>
           </td>
-        </tr>`)
-
-  $('.ReptileList').append(reptileHtml)
-  
-  $($(reptileHtml).find(".BotonSeleccionReptiles")).on('click', (e) => {
-    var rowParent = $(e.target).parent().parent().parent();
-    console.log(e)
-    //rowParent.remove()
-    if ($(e.target).is(":checked")) {
-    rowParent.find(selecciones).prop("disabled", false);
-    } else {
-      rowParent.find(selecciones).prop("disabled", "disabled");
-    }
-  })
+        </tr>`);
 }
 
-var jajas = { nombre: "jaja"};
+function insertarReptil(objetoReptil) {
+	var reptileHtml = getReptileElementListHTML(objetoReptil);
 
-insertarReptil(jajas)
+	$(".ReptileList").append(reptileHtml);
+	$($(reptileHtml).find(".BotonSeleccionReptiles")).on(
+		"click",
+		addInputButtonFunctions
+	);
+}
+
+var jajas = { nombre: "jaja" };
+
+insertarReptil(jajas);

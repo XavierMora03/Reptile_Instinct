@@ -1,8 +1,8 @@
-const url = 'https://dh89u63wwk.execute-api.us-east-2.amazonaws.com/reptiles';
+//const url = 'https://dh89u63wwk.execute-api.us-east-2.amazonaws.com/reptiles';
 
 $.get(url, (data, status) => {
-    console.log(data, status)
-})
+	console.log(data, status);
+});
 //
 // $('.ReptileList').append(`<tr class="dbItem">
 //           <th scope="row ">
