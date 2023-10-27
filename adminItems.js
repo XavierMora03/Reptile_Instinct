@@ -186,3 +186,7 @@ function insertarReptil(objetoReptil) {
 var jajas = { nombre: "jaja" };
 
 insertarReptil(jajas);
+
+$(".BotonActualizar").on("click", () => {
+	insertarReptil(jajas);
+});
