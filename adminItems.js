@@ -1,21 +1,23 @@
-// por si el navegador guarda coockies
-reptileListSize = 1;
-function addInputButtonFunctions(e) {
-	var selecciones =
-		" td > div.input-group > input.form-control,  td > select.form-select, td > div.boton-fotos  >button , td > div.boton-fotos > input";
 
-	var rowParent = $(e.target).parent().parent().parent();
-	if ($(e.target).is(":checked")) {
-		rowParent.find(selecciones).prop("disabled", false);
-	} else {
-		rowParent.find(selecciones).prop("disabled", "disabled");
-	}
+reptileListSize = 1;
+//if the browser saves the previous elements
+function addInputButtonFunctions(e) {
+  var selections =
+    " td > div.input-group > input.form-control,  td > select.form-select, td > div.boton-fotos  >button , td > div.boton-fotos > input";
+
+  var rowParent = $(e.target).parent().parent().parent();
+  if ($(e.target).is(":checked")) {
+    rowParent.find(selections).prop("disabled", false);
+  } else {
+    rowParent.find(selections).prop("disabled", "disabled");
+  }
 }
+
 $(".BotonSeleccionReptiles").on("click", addInputButtonFunctions);
 
-function getReptileElementListHTML(objetoReptil) {
-	reptileListSize++;
-	return $.parseHTML(`<tr class="dbItem">
+function getReptileElementListHTML(reptileObject) {
+  reptileListSize++;
+  return $.parseHTML(`<tr class="dbItem">
           <th scope="row ">
             1
             <div class="form-check">
@@ -28,7 +30,8 @@ function getReptileElementListHTML(objetoReptil) {
               <input
                 type="text"
                 class="form-control"
-                placeholder= ${objetoReptil.nombre}
+                value = ${reptileObject.name}
+                placeholder= "Piton"
                 aria-label="Python"
                 aria-describedby="basic-addon1"
                 disabled
@@ -40,8 +43,9 @@ function getReptileElementListHTML(objetoReptil) {
               <input
                 type="number"
                 class="form-control"
-                placeholder="$4500"
-                aria-label="Precio"
+                value = ${reptileObject.price}
+                placeholder = "$4500"
+                aria-label= "Precio" 
                 aria-describedby="basic-addon1"
                 disabled
               />
@@ -52,8 +56,9 @@ function getReptileElementListHTML(objetoReptil) {
               <input
                 type="number"
                 class="form-control"
-                placeholder="$6000"
-                aria-label="PrecioR"
+                value = ${reptileObject.regularPrice}
+                placeholder= "$7000"
+                aria-label= "regularPrice"
                 aria-describedby="basic-addon1"
                 disabled
               />
@@ -64,7 +69,8 @@ function getReptileElementListHTML(objetoReptil) {
               <input
                 type="text"
                 class="form-control"
-                placeholder="Yellow Belly, Banana, Cryptic"
+                value = "${reptileObject.genetics}"
+                placeholder= "Yellow Belly, Banana, Cryptic"
                 aria-label="python"
                 aria-describedby="basic-addon1"
                 disabled
@@ -73,16 +79,16 @@ function getReptileElementListHTML(objetoReptil) {
           </td>
           <td>
             <select class="form-select" aria-label="edad" disabled>
-              <option value="Cria" selected>Cria</option>
-              <option value="Juvenil">Juenil</option>
-              <option value="Adulta">Adulta</option>
+              <option value="Cria"  ${reptileObject.ageEnum[0]} selected>Cria</option>
+              <option value="Juvenil" ${reptileObject.ageEnum[1]}>Juenil</option>
+              <option value="Adulta" ${reptileObject.ageEnum[2]}>Adulta</option>
             </select>
           </td>
 
           <td>
             <select class="form-select" aria-label="sexo" disabled>
-              <option value="Macho" selected>Macho</option>
-              <option value="Hembra">Hembra</option>
+              <option value="Macho" ${reptileObject.gender[0]} selected>Macho</option>
+              <option value="Hembra" ${reptileObject.gender[1]}>Hembra</option>
             </select>
           </td>
 
@@ -91,7 +97,8 @@ function getReptileElementListHTML(objetoReptil) {
               <input
                 type="text"
                 class="form-control"
-                placeholder="piton febrero 22 traida bonito patron"
+                value = ${reptileObject.description}
+                placeholder= "Bonita piton de febrero  de este 23"
                 aria-label="python"
                 aria-describedby="basic-addon1"
                 disabled
@@ -173,17 +180,17 @@ function getReptileElementListHTML(objetoReptil) {
         </tr>`);
 }
 
-function insertarReptil(objetoReptil) {
-	var reptileHtml = getReptileElementListHTML(objetoReptil);
+function insertarReptil(reptileObject) {
+  var reptileHtml = getReptileElementListHTML(reptileObject);
 
-	$(".ReptileList").append(reptileHtml);
-	$($(reptileHtml).find(".BotonSeleccionReptiles")).on(
-		"click",
-		addInputButtonFunctions
-	);
+  $(".ReptileList").append(reptileHtml);
+  $($(reptileHtml).find(".BotonSeleccionReptiles")).on(
+    "click",
+    addInputButtonFunctions
+  );
 }
 
-var jajas = { nombre: "jaja" };
+var jajas = { name: "Juan la vibora", price: 5000, regularPrice: 8000, genetics: "Het clown purpura", ageEnum: ["", "selected", "", ""], gender: ["", "selected", "", ""], description: "es juan la vibora" };
 
 insertarReptil(jajas);
 
