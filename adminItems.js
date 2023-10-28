@@ -19,7 +19,7 @@ function getReptileElementListHTML(reptileObject) {
   reptileListSize++;
   return $.parseHTML(`<tr class="dbItem">
           <th scope="row ">
-            1
+            ${reptileObject.key}
             <div class="form-check">
               <input class="form-check-input  BotonSeleccionReptiles" type="checkbox" value="" />
             </div>
@@ -97,7 +97,7 @@ function getReptileElementListHTML(reptileObject) {
               <input
                 type="text"
                 class="form-control"
-                value = ${reptileObject.description}
+                value = "${reptileObject.description}"
                 placeholder= "Bonita piton de febrero  de este 23"
                 aria-label="python"
                 aria-describedby="basic-addon1"
@@ -190,10 +190,40 @@ function insertarReptil(reptileObject) {
   );
 }
 
-var jajas = { name: "Juan la vibora", price: 5000, regularPrice: 8000, genetics: "Het clown purpura", ageEnum: ["", "selected", "", ""], gender: ["", "selected", "", ""], description: "es juan la vibora" };
+function logsmh(e) {
+  console.log("JJJJj")
+  insertarReptil(jajas);
+}
+
+var jajas = { key: "jun2", name: "Juan la vibora", price: 5000, regularPrice: 8000, genetics: "Het clown purpura", ageEnum: ["", "selected", "", ""], gender: ["", "selected", "", ""], description: "es juan la vibora" };
+var jajas2 = { key: "jun2", name: "Juan la vibora", price: 5000, regularPrice: 8000, genetics: "Het clown purpura", ageEnum: "Cria", gender: "Macho", description: "es juan la vibora" };
+
 
 insertarReptil(jajas);
 
-$(".BotonActualizar").on("click", () => {
-	insertarReptil(jajas);
-});
+function Reptile(arr) {
+  this.name = arr[0];
+  this.price = arr[1];
+  this.regularPrice = arr[2];
+  this.genetics = arr[3];
+  this.ageEnum = arr[4];
+  this.gender = arr[5];
+  this.description = arr[6];
+
+}
+function readNewItem() {
+  var myarr = []
+  $(".nuevoItem .reptileGetInput ").each((e, a) => { myarr.push($(a).val()) })
+  console.log(myarr)
+  var inputs = $(".nuevoItem .reptileGetInput ")
+  var myRep = new Reptile(myarr)
+  console.log(myRep)
+
+
+  // var lala = $(".nuevoItem :input").val()
+  // console.log(lala)
+  // console.log(lala[1])
+}
+$(".BotonActualizar").on("click", readNewItem)
+
+
